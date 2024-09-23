@@ -1,5 +1,5 @@
 body {
-    background-image: url("background.svg");
+    background-image: url("./img/background.svg");
     background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
     background-size: cover; /* 画面全体に画像を自動的にフィットさせる */
     background-position: center; /* 画像を中央に配置 */
