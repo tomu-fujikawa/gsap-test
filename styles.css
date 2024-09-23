@@ -24,7 +24,6 @@ body {
     z-index: 1000;
   }
   .loading-container{
-    z-index:2;
     display: flex;
     width:30%;
     gap: 20px;
@@ -34,7 +33,6 @@ body {
     height: 10px;
     background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
     margin-bottom: 20px;
   }
   
@@ -71,61 +69,10 @@ body {
     height:180px;
 }
 
-
-@keyframes infinity-scroll-left {
-    from {
-      transform: translateX(0);
-    }
-      to {
-      transform: translateX(-100%);
-    }
-    }
-    .scroll-infinity__wrap {
-      display: flex;
-      overflow: hidden;
-    }
-    .scroll-infinity__list {
-      display: flex;
-      list-style: none;
-      padding: 0
-    }
-    .scroll-infinity__list--left {
-      animation: infinity-scroll-left 10s infinite linear 0.5s both;
-    }
-    .scroll-infinity__item {
-      width: calc(100vw / 10);
-    }
-    .scroll-infinity__item>img {
-      width: 100%;
-    }
-	@keyframes infinity-scroll-right {
-        from {
-          transform: translateX(-100%);
-        }
-          to {
-          transform: translateX(0%);
-        }
-        }
-        .scroll-infinity__list--right{
-          animation :infinity-scroll-right 10s infinite linear 0.5s both;
-        }
-
-
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    margin: 50px auto;
-}
-
 .circles{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .time_line {
-    color: black;
   }
   
   .square_block {
@@ -190,5 +137,26 @@ body {
     place-items: center;
     font-size: 40px;
     color: #fff;
+  }
+  
+  .scroll-infinity__wrap {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .scroll-infinity__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .scroll-infinity__item {
+    width: calc(100vw / 10); /* ビュー幅の10分の1 */
+    flex-shrink: 0; /* 要素が縮小しないように指定 */
+  }
+  
+  .scroll-infinity__item img {
+    width: 100%;
   }
   
